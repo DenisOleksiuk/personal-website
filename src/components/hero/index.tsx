@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { BackgroundBeams } from '../ui/background-beams';
-import { Highlight, HeroHighlight } from '../ui/highlight';
+import { Highlight } from '../ui/highlight';
 
 const Hero = () => {
     return (
