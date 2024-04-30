@@ -11,7 +11,7 @@ export const Highlight = ({
     className?: string;
 }) => {
     return (
-        <motion.span
+        <motion.div
             initial={{
                 backgroundSize: '0% 100%'
             }}
@@ -25,15 +25,14 @@ export const Highlight = ({
             }}
             style={{
                 backgroundRepeat: 'no-repeat',
-                backgroundPosition: 'left center',
-                display: 'inline'
+                backgroundPosition: 'left center'
             }}
             className={cn(
-                `relative inline-block pb-1   px-1 rounded-lg bg-gradient-to-r from-indigo-300 to-purple-300`,
+                `relative inline-block pb-1 px-1 rounded-lg bg-gradient-to-r from-indigo-300 to-purple-300`,
                 className
             )}
         >
             {children}
-        </motion.span>
+        </motion.div>
     );
 };
