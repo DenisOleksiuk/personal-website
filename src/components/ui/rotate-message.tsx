@@ -1,29 +1,29 @@
 'use client';
 import { motion, useMotionValue, useTransform } from 'framer-motion';
-import { RefreshCw } from 'lucide-react';
+import { MoveHorizontal } from 'lucide-react';
 import Image from 'next/image';
 import { Highlight } from './highlight';
 
-const Rotate = () => {
+const RotateMessage = () => {
     const x = useMotionValue(0);
     const opacity = useTransform(x, [-100, 0, 100], [0, 1, 0]);
 
     return (
-        <>
+        <div className="mt-10">
             <div className="flex justify-center items-center">
                 <Highlight
                     delay={2}
-                    className="relative z-10 text-lg md:text-5xl bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-black dark:to-neutral-200  text-center font-sans font-bold"
+                    className="relative z-10 text-md md:text-3xl bg-clip-text text-transparent bg-gradient-to-r from-neutral-400 to-black dark:to-neutral-50  text-center font-sans"
                 >
                     rotate the computer
                 </Highlight>
             </div>
             <motion.div
                 initial={{
-                    rotate: 0
+                    rotateY: 0
                 }}
                 animate={{
-                    rotate: [60, 0, 60]
+                    rotateY: [40, 0, 40]
                 }}
                 transition={{
                     duration: 2,
@@ -44,11 +44,11 @@ const Rotate = () => {
                         delay: 4
                     }}
                 >
-                    <RefreshCw size={40} color="white" className="w-10 h-10" />
+                    <MoveHorizontal size={40} color="gray" className="w-10 h-10" />
                 </motion.span>
             </motion.div>
-        </>
+        </div>
     );
 };
 
-export default Rotate;
+export default RotateMessage;

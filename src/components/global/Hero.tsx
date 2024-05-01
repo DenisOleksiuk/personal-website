@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import { Highlight } from '../ui/highlight';
 import ComputersCanvas from '../canvas/Computers';
-import Rotate from '../ui/rotate';
+import RotateMessage from '../ui/rotate-message';
 
 const Hero = () => {
     const [showComputersCanvas, setShowComputersCanvas] = useState(false);
@@ -23,7 +23,7 @@ const Hero = () => {
                 </Highlight>
             </div>
 
-            <Rotate />
+            <RotateMessage />
             {showComputersCanvas && <ComputersCanvas />}
         </section>
     );
