@@ -4,9 +4,11 @@ import { motion } from 'framer-motion';
 import React from 'react';
 
 export const Highlight = ({
+    delay = 0.5,
     children,
     className
 }: {
+    delay?: number;
     children: React.ReactNode;
     className?: string;
 }) => {
@@ -19,9 +21,9 @@ export const Highlight = ({
                 backgroundSize: '100% 100%'
             }}
             transition={{
-                duration: 2,
+                duration: 1.5,
                 ease: 'linear',
-                delay: 0.5
+                delay
             }}
             style={{
                 backgroundRepeat: 'no-repeat',
